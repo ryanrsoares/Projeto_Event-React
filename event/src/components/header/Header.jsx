@@ -1,10 +1,10 @@
 import "./Header.css"
 import Logo from "../../assets/img/logo1.svg"
-import Logo_adm from "../../assets/img/Vector.svg"
+import Logo_adm from "../../assets/img/Sair.svg"
 
 
 const Header = () => {
-    return (
+    return (    
         <header>
             <div className="layout_grid cabecalho">
                 <img src={Logo} alt="Logo Evento" />
