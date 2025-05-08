@@ -33,7 +33,7 @@ const ListagemEventos = () => {
                             <td data-cell="Nome" >Nome Evento</td>
                             <td data-cell="Evento">Tipo Evento</td>
                             <td data-cell="Editar"><img src={Comentario} alt="Imagem de um balão" /></td>
-                            <td data-cell="Excluir"><Checkin /></td>
+                            <td data-cell="chekin"><Checkin /></td>
                         </tr>
                     </tbody>
                     <tbody>
@@ -41,7 +41,7 @@ const ListagemEventos = () => {
                             <td data-cell="Nome" >Nome Evento</td>
                             <td data-cell="Evento">Tipo Evento</td>
                             <td data-cell="Editar"><img src={Comentario} alt="Imagem de um balão" /></td>
-                            <td data-cell="Excluir"><Checkin /></td>
+                            <td data-cell="chekin"><Checkin /></td>
                         </tr>
                     </tbody>
                 </div>

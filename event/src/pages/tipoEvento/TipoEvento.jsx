@@ -19,6 +19,8 @@ const TipoEvento = () => {
         
         <Lista
             tituloLista="Lista Tipo De Eventos"
+            titulo="Titulo"
+            assunto="Tipo Evento"
             visibilidade="none"
         />
 

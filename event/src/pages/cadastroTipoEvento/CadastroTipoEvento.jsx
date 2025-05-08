@@ -16,6 +16,7 @@ const CadastroTipoEvento = () => {
             />
             
             <Lista
+                tituloLista="Lista de Eventos"
                 titulo="Nome"
                 tipo_Do_Evento="Tipo Evento"
                 assunto="Tipo Evento"
