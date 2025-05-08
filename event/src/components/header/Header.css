@@ -5,14 +5,14 @@ header{
     position: relative;
 }
 
-.cabecalho{
+.header_header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.cabecalho img{
+.header_header img{
     height: 25px;
 }
 
@@ -28,4 +28,20 @@ header{
     width: 15px;
     height: 13px;
     padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .header_header img{
+        height: 15px;
+    }
+    .header_header{
+        justify-content: center;
+        align-items: center;
+    }
+    .link_header{
+        display: none;
+    }
+    .navas_header{
+        display: none;
+    }
 }

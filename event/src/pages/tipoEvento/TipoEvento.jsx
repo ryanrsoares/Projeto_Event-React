@@ -11,11 +11,15 @@ const TipoEvento = () => {
     <main>
         <Cadastro
             tituloCadastro="Cadastro Tipo de Eventos"
-            namePlace="Titulo"
-        />
+            namePlace="Nome"
+            visibilidade="none"
+            bannerCadastro="none"
+            bannerUsuario="none"
+            />
         
         <Lista
             tituloLista="Lista Tipo De Eventos"
+            visibilidade="none"
         />
 
     </main>

@@ -12,14 +12,16 @@ const Lista = (props) => {
             <div className="tabela">
                 <thead>
                     <tr className="table_cabecalho">
-                        <th>Titulo</th>
+                        <th>{props.titulo}</th>
+                        <th style={{display:props.visibilidade}}>{props.tipo_Do_Evento}</th>
                         <th>Editar</th>
                         <th>Excluir</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr className="item_lista">
-                        <td data-cell="Nome" >Tipo Evento</td>
+                        <td data-cell="titulo" >{props.assunto}</td>
+                        <td data-cell="sub_titulo" style={{display:props.visibilidade}}>{props.assunto_lista}</td>
                         <td data-cell="Editar"><img src={Editar} alt="Imagem de uma caneta" /></td>
                         <td data-cell="Excluir"><img src={Excluir} alt="Lixeira" /></td>
                     </tr>

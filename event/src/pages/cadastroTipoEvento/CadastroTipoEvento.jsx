@@ -9,12 +9,18 @@ const CadastroTipoEvento = () => {
         <Header/>
         <main>
             <Cadastro
-                tituloCadastro="Cadastro Tipo de Eventos"
-                namePlace="Titulo"
+                tituloCadastro="Cadastro de Evento"
+                namePlace="Nome"
+                bannerTipoEvento="none"
+                bannerUsuario="none"
             />
             
             <Lista
-                tituloLista="Lista De Eventos"
+                titulo="Nome"
+                tipo_Do_Evento="Tipo Evento"
+                assunto="Tipo Evento"
+                assunto_lista="Lista De Eventos"
+                titulo_lista="Nome Evento"
             />
 
         </main>

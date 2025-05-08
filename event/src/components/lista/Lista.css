@@ -1,4 +1,3 @@
-
 .listagem {
   height: 370px;
 
@@ -42,16 +41,22 @@
   margin-left: -60px;
 
 
+
 }
 
 
 .tabela .table_cabecalho :first-child {
-  width: 600px;
+  width: 1500px;
+  text-align: start;
+  padding: 6px 5px 6px;
   
 }
 
 .tabela .table_cabecalho :nth-child(2) {
-  width: 550px;
+  width: 1000px;
+  text-align: start;
+  padding-right: 650px;
+  
   
 }
 
@@ -59,9 +64,37 @@
   border-bottom: 1px solid white;
   width: 100px;
   margin-top: 40px;
+  padding-left: 10px;
+  
 }
 
 .item_lista td {
   padding: 30px 5px 0;
+  text-align: start;
+  margin-left: 100px;
+  
+}
+
+.tabela .item_lista :first-child{
+  margin-bottom: 10px;
+  margin-left: 32px;
+  
+}
+
+.tabela .item_lista :nth-child(2){
+  text-align: start;
+}
+
+@media screen and (max-width:728px) {
+  .tabela{
+      font-size: 10px; 
+  }
+  .tabela .item_lista :nth-child(3){
+      width: 110px;
+  }
+  .listagem h1 {
+      font-size: large;
+  }
+  
 }
 

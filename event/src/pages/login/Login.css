@@ -5,14 +5,19 @@
     ;
 }
 
-.banner{
-    background-image: url("../../assets/img/banner.svg");
-
+.logo_Banner{
     flex: 1;
-
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_Banner img{
+    width: 340px;
+    height: 245px;
 }
 
 .section_login{

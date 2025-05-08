@@ -6,7 +6,7 @@ import Logo_adm from "../../assets/img/Sair.svg"
 const Header = () => {
     return (    
         <header>
-            <div className="layout_grid cabecalho">
+            <div className="layout_grid header_header">
                 <img src={Logo} alt="Logo Evento" />
                 <nav className="nav_header">
                     <a href="" className="link_header">Home</a>
