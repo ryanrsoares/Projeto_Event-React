@@ -1,48 +1,51 @@
-import "./Cadastro.css";
 import Botao from "../botao/Botao";
-import bannerCadastro from "../../assets/img/evento.svg";
-import bannerTipoEvento from "../../assets/img/tipoEvento.svg";
-import bannerUsuario from "../../assets/img/tipoUsuario.svg";
-
+import "./Cadastro.css"
+import imagem from "../../assets/img/more.png"
+ import imagem2 from "../../assets/img/Imagem2.png"
+import imagem3 from "../../assets/img/Imagem3.png"
 const Cadastro = (props) => {
     return (
-        <main className="main_cadastro">
-            <div className="titulo">
-                    <h1>{props.tituloCadastro}</h1>
-                    <hr/>
-                </div>
-
+        <>
             <section className="section_cadastro">
-                    <div className="banner_cadastro">
-                        <img style={{display:props.bannerUsuario}} src={bannerUsuario} alt="Fundo banner do tipo de usuarios" />
-                        <img style={{display:props.bannerTipoEvento}} src={bannerTipoEvento} alt="Fundo banner do tipo de eventos" />
-                        <img style={{display:props.bannerCadastro}} src={bannerCadastro} alt="Fundo banner do cadastro eventos" />
-                    </div>
+                <form onSubmit={props.funcCadastro} className="layout-grid form_cadastro">
 
-                <form action="" className="layout_grid form_cadastro">
-            
-                    <div className="campos_cadastro">
-                        <div className="campo_cad_titulo">
-                            <label htmlFor="titulo"></label>
-                            <input type="text" name="nome" placeholder={`${props.namePlace}`}/>
+                    <h1>{props.tituloCadastro}</h1>
+                    <hr />
+                    {/* Imagens da pagina cadastro */}
+                    <div className="cadastro_pai">
+                    <div className="banner_cadastro" style={{display:props.tovenono}}><img src={imagem} alt="Imagem" /></div>
+                    <div className="banner_cadastro"style={{display:props.toveno}}><img src={imagem2} alt="Imagem" /></div>
+                    <div className="banner_cadastro" style={{display:props.taveno}} ><img src={imagem3} alt="Imagem" /></div>
+
+                        {/* Parte do input de todas as paginas cadastro */}
+                    <div className="campos_cadastros">
+                        <div className="campo_cad_nome">
+                            <input placeholder={`${props.placeholder}`}
+                            value={props.valorInput}
+
+                            onChange={(e)=> props.setValorInput(e.target.value)}
+                            
+                            /> {/*Input de cadstro*/}
                         </div>
-                        <div className="campo_cad_tipoEvento" style={{display:props.visibilidade}}>
-                            <label htmlFor="tipoEvento"></label>
-                            <select name="tipoEvento" id="">
-                                <option value="" disabled selected>Tipo Evento</option>
-                                <option value="">op 01</option>
-                                <option value="">op 02</option>
-                                <option value="">op 03</option>
+
+                            {/* Select da pagina Eventos */}
+                        <div className="campo_cad_tipo" style={{ display: props.visibilidade }}>
+                            <select name="TipoEvento" id="">
+                                <option value="">Vivo</option>
+                                <option value="">Tim</option>
+                                <option value="">Claro</option>
+                                <option value="">Oi</option>
                             </select>
                         </div>
-
-                        <Botao nomeDoBotao="Cadastrar"/>
+                        <Botao nomeDoBotao="Cadastrar" />
                     </div>
+
+                    </div>
+
+
                 </form>
             </section>
-        </main>
+        </>
     )
 }
-
 export default Cadastro;
-

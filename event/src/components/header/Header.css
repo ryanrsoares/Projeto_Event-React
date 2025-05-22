@@ -1,44 +1,51 @@
 header{
-    background-color: white;
-    height: 75px;
-    box-shadow: 1px 4px 4px 0px #0000008f;
-    position: relative;
+    height: 80px;
+    box-shadow: 1px 4px 4px 0px #00000030;
 }
-
-.header_header{
+.header-header{
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
 }
 
-.header_header img{
-    height: 25px;
-}
-
-.link_header{
-    margin-left: 45px;
-
-    color: black;
-
+.link-header{
+    margin-left:65px ;
+    margin-right: 5px;
     text-decoration: none;
+    color: #1f1848;
+
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.navas_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
 }
 
-.Logo_adm img{
-    width: 5px;
-    height: 5px;
-    padding-left: 10px;
+.logar{
+    margin-left: 250px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #B51D44;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    font-size: small;
 }
 
 @media screen and (max-width: 768px) {
-    .header_header img{
+    .header-header img{
         height: 15px;
     }
-    .header_header{
+    .header-header{
         justify-content: center;
         align-items: center;
     }
-    .link_header{
+    .link-header{
         display: none;
     }
     .navas_header{

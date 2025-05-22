@@ -1,9 +1,7 @@
-import "./Lista.css"
-import Editar from "../../assets/img/Editar.svg"
-import Excluir from "../../assets/img/Lixeixa.svg"
-
-
-const Lista = (props) => {
+import "./Listar.css"
+import Lixinho from "../../assets/img/Lixo.png"
+import Lapizinho from "../../assets/img/Lapis.png"
+const Listar = (props) => {
     return (
         <>
             <section className="listagem">
@@ -32,8 +30,8 @@ const Lista = (props) => {
                                         key={props.tipoLista == "tipoEvento" ? item.TituloTipoEvento : ("Não ta rodando")}>
                                             <td data-cell={props.nomezin}>{props.tipoLista == "tipoEvento" ? item.tituloTipoEvento : ("Não ta rodando")}</td>
                                             <td style={{ display: props.visible }} data-cell="TipoEvento">UIA</td>
-                                            <td data-cell="Editar Ações"><img src={Editar} alt="lapizin" onClick={() => props.editar(item)} style={{cursor:"pointer"}} /></td>
-                                            <td data-cell="Excluir Ações"><img src={Excluir} alt="lixin" onClick={() => props.deletar(item.tipoEventoID)} style={{cursor:"pointer"}} /></td>
+                                            <td data-cell="Editar Ações"><img src={Lapizinho} alt="lapizin" onClick={() => props.editar(item)} style={{cursor:"pointer"}} /></td>
+                                            <td data-cell="Excluir Ações"><img src={Lixinho} alt="lixin" onClick={() => props.deletar(item.tipoEventoID)} style={{cursor:"pointer"}} /></td>
                                         </tr>
                                     ))
                                 ) :
@@ -55,4 +53,4 @@ const Lista = (props) => {
         </>
     )
 }
-export default Lista;
+export default Listar;

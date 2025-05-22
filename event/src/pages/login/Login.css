@@ -1,79 +1,66 @@
 .main_login{
     display: flex;
     height: 100vh;
-    background-color: #B51D44;
-    ;
 }
-
-.logo_Banner{
+.banner{
+    background-image:url("../../assets/img/banner.png");
     flex: 1;
     background-position: center;
-    background-size: contain;
+    background-size: 425px;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo_Banner img{
-    width: 340px;
-    height: 245px;
+    background-color: #b51d45;
 }
 
 .section_login{
     display: flex;
-    flex: 1;
-    background-color: white;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
-
-.section_login img{
-    width: 300px;
-    margin-top: -90px;
+.bigger{
+    width: 250px;
+    margin-bottom: 90px;
 }
-
 .form_login{
-    width: 100;
-    height: 50%;
+    height: 45%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
-
 .campos_login{
     width: 100%;
-}
-
-.campo_input{
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
 
+    font-family: "poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 15px;
+    color: #A6A0A0;
 }
-
-.campo_input input{
-    height: 28px;
-    width: 400px;
+.campos_input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.campos_input input {
+    height: 25px;
+    width: 350px;
+    padding: 0px 10px;
+    border-color: #00000045;
+    border-top: none;
     border-left: none;
     border-right: none;
-    border-top: none;
     outline: none;
-    
 }
 
-.form_login a {
-    text-decoration: none;
-    color: #a6a0a0;
-}
-
-@media screen and (max-width: 768px){
-
-    /* 0pc ate 768 */
-    .banner{
+@media screen and (max-width:768px) {
+    .banner {
         display: none;
     }
-
 }

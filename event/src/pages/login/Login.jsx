@@ -1,29 +1,30 @@
-import LogoEvent from "../../assets/img/logo1.svg";
-import Logo from "../../assets/img/banner.svg";
 import "./Login.css";
-import Botao from "../../components/botao/Botao.jsx"
-
+import Logo from "../../assets/img/logo.svg"
+import Botao from "../../components/botao/Botao";
 const Login = () => {
-  return (
-    <main className="main_login">
-        <div className="logo_Banner"><img src={Logo} alt="" /></div>
+    return (
+        <main className="main_login">
+            <link rel="stylesheet" href="https://use.typekit.net/pam4ubo.css"></link>
+            <div className="banner"></div>
             <section className="section_login">
+                <img className="bigger" src={Logo} alt="Event+" />
                 <form action="" className="form_login">
-                <img src={LogoEvent} alt="" />
-                        <div className="campos_login">
-                            <div className="campo_input">
-                                <input type="email" name="email" placeholder="UserName"/>
-                            </div>
-                            <div className="campo_input">
-                                <input type="senha" name="senha" placeholder="Password"/>
-                            </div>
+                    <div className="campos_login">
+                        <div className="campos_input">
+                            <input type="email" placeholder="Username" />
                         </div>
-                        <a href="">Esqueceu sua senha</a>
-                        <Botao nomeDoBotao="Login"/>
+
+                        <div className="campos_input">
+                            <input type="password" placeholder="Password" />
+                        </div>
+
+                        <p>Esqueceu a senha?</p>
+
+                    </div>
+                    <Botao nomeDoBotao = "Login"/>
                 </form>
             </section>
-    </main>
-  )
+        </main>
+    )
 }
-
 export default Login;
