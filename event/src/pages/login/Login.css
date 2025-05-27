@@ -1,66 +1,89 @@
-.main_login{
+.main_login {
     display: flex;
+    justify-content: center;
+    background-color: #B51D44;
     height: 100vh;
 }
-.banner{
-    background-image:url("../../assets/img/banner.png");
+
+.logoBanner {
     flex: 1;
     background-position: center;
-    background-size: 425px;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-color: #b51d45;
-}
-
-.section_login{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+}
+
+.logoBanner img{
+    width: 340px;
+    height:245px;
+}
+
+.section_login {
+    display: flex;
     flex: 1;
-}
-.bigger{
-    width: 250px;
-    margin-bottom: 90px;
-}
-.form_login{
-    height: 45%;
-    display: flex;
-    justify-content: space-around;
+    background-color: #FFFFFF;
+    flex-direction: column;
     align-items: center;
-    flex-direction: column;
-}
-.campos_login{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    font-family: "poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 15px;
-    color: #A6A0A0;
+    width: 100%;
+    height: 100%;
 }
-.campos_input{
+
+
+.form_login {
+    color: white;
+    /* vai deixar o titulo com letra maiuscula */
+    width: 100;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+
+.campos_login {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.campo_input {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
-    margin-top: 20px;
-}
-.campos_input input {
-    height: 25px;
-    width: 350px;
-    padding: 0px 10px;
-    border-color: #00000045;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    outline: none;
+    margin-bottom: 30px;
+
 }
 
-@media screen and (max-width:768px) {
-    .banner {
+.campo_input input {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  font-size: 16px;
+}   
+
+.section_login a{
+    color: #A6A0A0;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+
+@media screen and (max-width:768px){
+    .logoBanner{
         display: none;
+
     }
 }
+
+
+
+
+
+
+
+

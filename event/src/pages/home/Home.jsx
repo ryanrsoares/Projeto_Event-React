@@ -1,25 +1,22 @@
-
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
-import BannerHome from "../../assets/img/bannerhome.png"
-import { Link } from "react-router-dom";
-import Mapinha from "../../assets/img/mapinha.png"
 import "./Home.css"
+import Footer from "../../components/footer/Footer"
+import Header from "../../components/header/Header"
+import { Link } from 'react-router-dom'
+import Mapinha from "../../assets/mapinha.svg"
+import BannerHome from "../../assets/bannerHome.png"
+
 const Home = () => {
-    return (   //Home meus crias
+  return (   //tela Home 
         <>
             <Header
                 Usuario = "none"
                 naver="none"
             />
-            <main className="layout_grid" >
-                {/* Banner */}
+            <main>
                 <div className="banner-div-home">
                     <img src={BannerHome} alt="Area de eventos da escola de informatica" />
                 </div>
-                {/* Banner */}
 
-                {/* Cards */}
                 <div className="cards-home">
 
                     <h2>Próximos Eventos</h2>
@@ -27,38 +24,35 @@ const Home = () => {
 
                     <div className="card-pai">
 
-                        <div className="cardzin">
+                        <div className="cardzinho">
                             <h2>Lorem</h2>
                             <p>Lorem ipsum dolor sit amet consecteturcorrupti tempora! Delectus fugia</p>
                             <Link className="link-card" to="/Login">Conectar</Link>
                         </div>
 
-                        <div className="cardzin">
+                        <div className="cardzinho">
                             <h2>Lorem</h2>
                             <p>Lorem ipsum dolor sit amet consecteturcorrupti tempora! Delectus fugia</p>
                             <Link className="link-card" to="/Login">Conectar</Link>
                         </div>
 
-                        <div className="cardzin">
+                        <div className="cardzinho">
                             <h2>Lorem</h2>
                             <p>Lorem ipsum dolor sit amet consecteturcorrupti tempora! Delectus fugia</p>
                             <Link className="link-card" to="/Login">Conectar</Link>
                         </div>
 
-                        <div className="cardzin">
+                        <div className="cardzinho">
                             <h2>Lorem</h2>
                             <p>Lorem ipsum dolor sit amet consecteturcorrupti tempora! Delectus fugia</p>
                             <Link className="link-card" to="/Login">Conectar</Link>
                         </div>
 
-                    </div> {/*Card-pai(aquele que configura os cardzin)*/}
+                    </div> 
 
                 </div>
-                {/* Cards */}
 
-                {/*Segundo Banner */}
                 <div className="segundo-banner">
-                    {/* <img src={Banner2} alt="Imagem meio roxa com duas faixas escuras" /> */}
                     <h2>Visão</h2>
                     <hr />
                     <div className="segundo-p">
@@ -67,9 +61,7 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                {/*Segundo Banner */}
 
-                {/*Pre-footer */}
                 <div className="pre-footer">
 
                     <h2>Contato</h2>
@@ -89,11 +81,11 @@ const Home = () => {
                        
                     </div>
                 </div>
-                {/*Pré-footer */}
             </main>
 
             <Footer />
         </>
     )
 }
-export default Home;
+
+export default Home

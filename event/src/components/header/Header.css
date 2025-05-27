@@ -1,28 +1,35 @@
 header{
-    height: 80px;
-    box-shadow: 1px 4px 4px 0px #00000030;
-}
-.header-header{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    background-color: white;
+
+    height: 75px;
+
+    box-shadow: 1px 4px 4px 0px #0000008f;
+    position: relative;
 }
 
-.link-header{
-    margin-left:65px ;
-    margin-right: 5px;
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cabecalho img{
+    height: 25px;
+}
+
+.link_header{
+    margin-left: 45px;
+
+    color: black;
+
     text-decoration: none;
-    color: #1f1848;
-
-    font-family: "poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
-.navas_header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
+
+.Adm img{
+    width: 15px;
+    height: 13px;
+    margin-left: 10px;
 }
 
 .logar{
@@ -38,17 +45,15 @@ header{
 }
 
 @media screen and (max-width: 768px) {
-    .header-header img{
-        height: 15px;
-    }
-    .header-header{
+    
+    .cabecalho{
         justify-content: center;
         align-items: center;
     }
-    .link-header{
+    .link_header{
         display: none;
     }
-    .navas_header{
+    .Adm{
         display: none;
     }
 }

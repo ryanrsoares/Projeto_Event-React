@@ -1,51 +1,50 @@
+import "./Cadastro.css";
 import Botao from "../botao/Botao";
-import "./Cadastro.css"
-import imagem from "../../assets/img/more.png"
- import imagem2 from "../../assets/img/Imagem2.png"
-import imagem3 from "../../assets/img/Imagem3.png"
+import Seta from "../../assets/seta.png"
+
+
 const Cadastro = (props) => {
     return (
-        <>
+
+        <main className="layout_grid main_cadastro">
+            <div className="titulo">
+                <h1>{props.tituloCadastro}</h1>
+                <hr />
+            </div>
+
             <section className="section_cadastro">
-                <form onSubmit={props.funcCadastro} className="layout-grid form_cadastro">
+                <div className="banner_cadastro">
+                    <img src={props.imagem} alt="Fundo banner do cadastro eventos" />
+                </div>
 
-                    <h1>{props.tituloCadastro}</h1>
-                    <hr />
-                    {/* Imagens da pagina cadastro */}
-                    <div className="cadastro_pai">
-                    <div className="banner_cadastro" style={{display:props.tovenono}}><img src={imagem} alt="Imagem" /></div>
-                    <div className="banner_cadastro"style={{display:props.toveno}}><img src={imagem2} alt="Imagem" /></div>
-                    <div className="banner_cadastro" style={{display:props.taveno}} ><img src={imagem3} alt="Imagem" /></div>
+                <form onSubmit={props.funcCadastro} className="layout_grid form_cadastro">
 
-                        {/* Parte do input de todas as paginas cadastro */}
-                    <div className="campos_cadastros">
-                        <div className="campo_cad_nome">
-                            <input placeholder={`${props.placeholder}`}
-                            value={props.valorInput}
-
-                            onChange={(e)=> props.setValorInput(e.target.value)}
-                            
-                            /> {/*Input de cadstro*/}
+                    <div className="campos_cadastro">
+                        <div className="campo_cad_titulo">
+                            <label htmlFor="titulo"></label>
+                            <input type="text" 
+                            name="nome" 
+                            placeholder={`${props.namePlace}`} 
+                            value={props.ValorInput}    
+                            onChange={(e) => props.setValorInput(e.target.value)}/>
                         </div>
 
-                            {/* Select da pagina Eventos */}
-                        <div className="campo_cad_tipo" style={{ display: props.visibilidade }}>
-                            <select name="TipoEvento" id="">
-                                <option value="">Vivo</option>
-                                <option value="">Tim</option>
-                                <option value="">Claro</option>
-                                <option value="">Oi</option>
+                        <div className="campo_cad_tipoevento" style={{ display: props.visibilidade }}>
+                            <label htmlFor="tipoEvento">Gênero</label>
+                            <select name="tipoEvento" id="">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="">op 1</option>
+                                <option value="">op 2</option>
+                                <option value="">op 3</option>
                             </select>
                         </div>
                         <Botao nomeDoBotao="Cadastrar" />
                     </div>
-
-                    </div>
-
-
                 </form>
             </section>
-        </>
-    )
+        </main>
+        
+    );
 }
+
 export default Cadastro;

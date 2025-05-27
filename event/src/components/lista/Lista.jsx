@@ -1,58 +1,56 @@
-import "./Lista.css"
-import Editar from "../../assets/img/Editar.svg"
-import Excluir from "../../assets/img/Lixeixa.svg"
-
+import "./Lista.css";
+import Editar from "../../assets/Editar.png";
+import Excluir from "../../assets/Excluir.png";
 
 const Lista = (props) => {
     return (
-        <>
-            <section className="listagem">
-                <div className="layout_grid div_tabela">
-                    <h1>{props.tituloLista}</h1>
-                    <hr />
 
-                    <div className="tabela">
-                        <table>
-                            <thead>
-                                <tr className="table_cabecalho">
-                                    <th>{props.nomezin}</th>
-                                    <th style={{ display: props.visible }}>TipoEvento</th>
-                                    <th>{props.edit}</th>
-                                    <th style={{ display: props.visibly }}>Excluir</th>
-                                    {/* <th id="sim" style={{display:props.acao}}>Ações</th> */}
-                                </tr>
-                            </thead>
-                            <tbody> {/*Corpo da tabela*/}
-                                {/*A parte de listagem se encontra aqui*/}
-                                {props.lista && props.lista.length > 0 ? (
-                                    props.lista.map((item) => (
-                                        //Use console.log(item), para identificar o nome do id certinho caso esteja dando erro na requisição(é uma das possíveis soluções)
-                                        
-                                        <tr className="item_lista"
-                                        key={props.tipoLista == "tipoEvento" ? item.TituloTipoEvento : ("Não ta rodando")}>
-                                            <td data-cell={props.nomezin}>{props.tipoLista == "tipoEvento" ? item.tituloTipoEvento : ("Não ta rodando")}</td>
-                                            <td style={{ display: props.visible }} data-cell="TipoEvento">UIA</td>
-                                            <td data-cell="Editar Ações"><img src={Editar} alt="lapizin" onClick={() => props.editar(item)} style={{cursor:"pointer"}} /></td>
-                                            <td data-cell="Excluir Ações"><img src={Excluir} alt="lixin" onClick={() => props.deletar(item.tipoEventoID)} style={{cursor:"pointer"}} /></td>
-                                        </tr>
-                                    ))
-                                ) :
-                                    (
-                                        <p>não estou entendendo</p>
-                                    )}
-                                {/* <tr className="item_lista">
-                                    <td data-cell={props.nomezin}>Senai</td>
-                                    <td style={{ display: props.visible }} data-cell="TipoEvento">Gigachads</td>
-                                    <td data-cell="Editar Ações"><img src={Lapizinho} alt="lapizin" /></td>
-                                    <td data-cell="Excluir Ações"><img src={Lixinho} alt="lixin" /></td>
-                                </tr> */}
-                            </tbody>
-                        </table>
-                    </div>
+        <section className=" listagem">
+            <div className="titulo_organizando">
+                <h1>{props.tituloPagina}    </h1>
+                <hr className="linha_titulo" />
+            </div>
 
-                </div>
-            </section>
-        </>
-    )
-}
+            <div className="tabela">
+                <table>
+                    <thead>
+                        <tr className="table_cabecalho">
+
+                            <th style={{ display: props.tituloVisibilidade }}>Titulo</th>
+                            <th style={{ display: props.visibilidade }}>Nome</th>
+                            <th style={{ display: props.visi }} id="tipoEvento">Tipo Evento </th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {props.lista && props.lista.length > 0 ? (
+                            props.lista.map((item) => (
+                        <tr className="item_lista" Key={props.tipoLista == "tiposEventos" ? item.IdTipoEvento : item.TituloTipoEvento}>
+                            <td data-cell="Nome" style={{ display: props.visibol }} >Nome</td>
+                            <td data-cell="Tipo Evento">
+                                {item.tituloTipoEvento}
+                            </td>   
+                            <td data-cell="Editar">
+                                <button onClick={() => {props.funcEditar(item)}}>
+                                <img src={Editar} alt="Ícone editar" />
+                                </button>
+                            </td>
+                            <td data-cell="Excluir"><img src={Excluir} alt="Lixeira"  onClick={() => props.funcDeletar(item)} /></td>
+                        </tr>
+                        ))
+                    )
+                    :(<p>{props.listagemGenFil}</p>
+
+                    )
+                }
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    );
+};
+
 export default Lista;

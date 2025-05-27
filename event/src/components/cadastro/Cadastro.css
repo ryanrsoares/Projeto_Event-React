@@ -1,55 +1,97 @@
-.section_cadastro{
-    padding: 50px 0;
+.layout_grid {
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-    font-family: "poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: small;
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 50px;
+
+    font-size: 13px;
+}
+
+
+.titulo hr{
+    border-color: #B51D44;
+    width: 230px;
+    border-style: solid;
+    border-top-width: 2px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.section_cadastro{
+
+    color: white;
+    padding: 46px 0;
+
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 450px;
+
+}
+
+.banner_cadastro {
+    flex: 1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 150px;
+}
+
+.banner_cadastro img{
+    width: 450px;
+    height: 250px;
 }
 
 .form_cadastro{
+    width: 100;
+    height: 50%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
+.campo_cad_titulo input,
+.campo_cad_tipoevento select{
+    border: none;
+    margin-bottom: 85px;
+    padding: 5px 5px;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 15px;
+    width: 356px;
+    border-radius: 1px;
+    
+}
 
-.cadastro_pai{
-    display: flex;
-}
-.banner_cadastro{
-    margin-right: 250px;
-}
-
-.form_cadastro h1{
-    text-transform: uppercase;
-}
-.form_cadastro hr{
-    max-width: 200px;
-    width: 100%;
-    margin-top: 7px;
-    margin-bottom: 50px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #B51D44;
-}
-.campos_cadastros{
+.campo_cad_titulo,
+.campo_cad_tipoEvento{
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
 }
 
-.campo_cad_nome input,
-.campo_cad_tipo select{
-    border-left: none;
-    border-right: none;
-    border-top: none;
-   outline: none;
-   padding: 0 3px;
-   width: 280px;
-   height: 45px;
-   margin-bottom: 60px;
+.campo_cad_tipoevento{
+    margin-left: -54px;
 }
+
 @media screen and (max-width: 880px){
     .campos_input{
         flex-direction: column;
@@ -61,9 +103,4 @@
     }
 }
 
-@media screen and (max-width: 340px) {
-    .form_cadastro h1 {
-        font-size: 18px;
-    }
-    
-}
+

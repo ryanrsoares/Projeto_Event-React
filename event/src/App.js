@@ -1,14 +1,14 @@
 import './App.css';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-import Login from './pages/login/Login';
-import Rotas from './Routes/routes';
+import CadastroEvento from './pages/cadastroEvento/CadastroEvento.jsx';
+import Rotas from "./routes/routes.js"
 
 function App() {
   return (
+
     <>
-    <Rotas/>
+      <Rotas />
     </>
+    
   );
 }
 

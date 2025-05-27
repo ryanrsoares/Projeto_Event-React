@@ -12,7 +12,7 @@
 }
 
 .listagem_evento{
-    height: 690px;
+    height: 570px;
 
     display: flex;
     flex-direction: column;
@@ -21,7 +21,6 @@
 
     background-color: white;
     color: black;
-    border-color: solid 1px black;
 }
 
 .listagem_evento h1{
@@ -81,3 +80,7 @@
     text-align: start;
 }
 
+tbody button{
+    background-color: transparent;
+    border: 0px;
+}
