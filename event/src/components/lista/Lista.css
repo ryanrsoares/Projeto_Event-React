@@ -42,6 +42,7 @@
     border-collapse: collapse;
   }
   
+  
   .table_cabecalho th {
     padding: 10px;
     text-align: center;
@@ -55,6 +56,7 @@
   
   .item_lista td {
     padding: 20px;
+    border-right: -300px;
   }
   
   .item_lista img {

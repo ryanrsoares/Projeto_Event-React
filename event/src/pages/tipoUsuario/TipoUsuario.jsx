@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 const TipoUsuario = () => {
 
     const[tipoUsuario, setTipoUsario] = useState ("")
-    const[listaTiposUsuarios, setListaTiposUsuarios] = useState({});
+    const[listaTiposUsuarios, setListaTiposUsuarios] = useState([]);
 
 
      function alertar(icone, mensagem) {
@@ -41,6 +41,7 @@ const TipoUsuario = () => {
         try{
             await api.post("tiposUsuarios", {tituloTipoUsuario: tipoUsuario});
             setTipoUsario("");
+            await listarTiposUsuarios();
 
             let timerInterval;
                 Swal.fire({ 
@@ -76,20 +77,19 @@ const TipoUsuario = () => {
 
     }
 
-    async function listarTiposUsuarios(){
-        try {
-            const resposta = await api.get("tiposUsuarios");
-            setListaTiposUsuarios(resposta.data);
-        } catch (error) {
-            console.log(error);
-            
-        }
+   async function listarTiposUsuarios(){
+    try {
+        const resposta = await api.get("tiposUsuarios");
+        setListaTiposUsuarios(resposta.data);
+    } catch (error) {
+        console.log(error);
     }
+}
 
     useEffect(() => {
         listarTiposUsuarios();
 
-    }, [listaTiposUsuarios]);
+    }, []);
 
     async function deletarTipoUsuario(id) {
         try {
@@ -116,31 +116,33 @@ const TipoUsuario = () => {
         }
     }
 
-    async function editarTipoUsuario(tipoUsuario) {
-        const { value: novoTipoUsuario } = await Swal.fire({
-        title: "Edite seu tipo de usuario",
-        input: "text",
-        inputLabel: "Novo Tipo de usuario",
-        inputValue:  tipoUsuario.tituloTipoUsuario,
-        showCancelButton: true,
-        inputValidator: (value) => {
-            if (!value) {
-                
-            return "O campo nao pode estar vazio";
+        async function editarTipoUsuario(tipoUsuario) {
+            const { value: novoTipoUsuario } = await Swal.fire({
+                title: "Edite seu tipo de usuário",
+                input: "text",
+                inputLabel: "Novo Tipo de Usuário",
+                inputValue: tipoUsuario.tituloTipoUsuario,
+                showCancelButton: true,
+                inputValidator: (value) => {
+                if (!value) {
+                    return "O campo não pode estar vazio";
+                }
+                },
+            });
+
+            if (novoTipoUsuario) {
+                try {
+                await api.put(`tiposUsuarios/${tipoUsuario.idTipoUsuario}`, {
+                    tituloTipoUsuario: novoTipoUsuario,
+                });
+                Swal.fire(`O tipo de usuário foi modificado para ${novoTipoUsuario}`);
+                listarTiposUsuarios();  
+                } catch (error) {
+                console.error("Erro ao editar tipo de usuário:", error);
+                alertar("error", "Erro ao editar. Veja o console.");
+                }
             }
         }
-        });
-        if (novoTipoUsuario) {
-                try {
-                    // console.log(genero.nome);
-                    // console.log(novoGenero);
-                    await api.put(`tiposUsuarios/${tipoUsuario.tituloTipoUsuario }`,{tituloTipoUsuario: novoTipoUsuario});
-                    Swal.fire(`O Tipo evento foi modificado para ${novoTipoUsuario}`);
-                } catch (error) {
-                    console.log(error);     
-                }
-        }
-    }
 
     return(
 
@@ -154,17 +156,22 @@ const TipoUsuario = () => {
                 tituloCadastro="CADASTRO TIPO DE USUÁRIO"
                 namePlace="Titulo"
                 visibilidade="none"
+                Inst="none"
+                desc="none"
+                data="none"
                 imagem= {Banner}
                 funcCadastro={cadastrarTipoEvento}
                 ValorInput={tipoUsuario}
                 setValorInput={setTipoUsario}
             />
             <Lista
-            
+            tituloEvento="Titulo"
+            Descrição="none"
             tituloPagina="LISTA TIPO DE USUÁRIO"
             visibilidade="none"
             visibol="none"
             visi="none"
+            funcDescricao="none"
             lista={listaTiposUsuarios}
             funcDeletar={deletarTipoUsuario}
             funcEditar={editarTipoUsuario}

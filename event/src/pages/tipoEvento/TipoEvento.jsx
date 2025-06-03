@@ -6,6 +6,7 @@ import Banner from "../../assets/bannerCadastro.png"
 import api from "../../Services/services";
 import Swal from 'sweetalert2'
 import { useEffect, useState } from "react";
+
 const TipoEvento = () => {
 
     const [tipoEvento, setTipoEvento] = useState("")
@@ -142,8 +143,6 @@ const TipoEvento = () => {
         });
         if (novoTipoEvento) {
                 try {
-                    // console.log(genero.nome);
-                    // console.log(novoGenero);
                     await api.put(`TiposEventos/${tipoEvento.idTipoEvento}`,{tituloTipoEvento: novoTipoEvento});
                     Swal.fire(`O Tipo evento foi modificado para ${novoTipoEvento}`);
                 } catch (error) {
@@ -163,7 +162,9 @@ const TipoEvento = () => {
             <Cadastro 
                 tituloCadastro="CADASTRO TIPO DE EVENTOS"
                 namePlace="Titulo"
-                visibilidade="none"
+                Inst="none"
+                desc="none"
+                data="none"
                 imagem= {Banner}
                 funcCadastro= {cadastrarTipoEvento}
                 ValorInput = {tipoEvento}
@@ -171,7 +172,8 @@ const TipoEvento = () => {
                 
             />
             <Lista
-            tituloPagina="LISTA TIPO DE EVENTOS"
+                tituloEvento="Titulo"
+                tituloPagina="LISTA TIPO DE EVENTOS"
                 visibilidade="none"
                 visi="none"
                 visibol="none"  

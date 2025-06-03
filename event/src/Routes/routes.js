@@ -12,12 +12,12 @@ const Rotas = () => {
 
         <BrowserRouter>
             <Routes>
-                <Route path="/" element = {<Login/>} exact/>
+                <Route path="/" element = {<Home/>} exact/>
                 <Route path="/TipoEvento" element = {<TipoEvento/>}/>
                 <Route path="/TipoUsuario" element = {<TipoUsuario/>}/>
                 <Route path="/ListaEventos" element = {<ListaEventos/>}/>
                 <Route path="/CadastroEvento" element = {<CadastroEventos/>}/>
-                <Route path="/Home" element = {<Home/>}/>
+                <Route path="/Login" element = {<Login/>}/>
                 
             </Routes>
         </BrowserRouter>
